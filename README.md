@@ -22,9 +22,9 @@ Simple UI component to make process of picking number faster and better looking 
                 app:delimNumber="5"
                 />
 
-        ((SimpleNumberPicker) findViewById(R.id.horizontal_2)).setOnNewValueSelectedListener(new OnNewValueSelectedListener() {
+        ((SimpleNumberPicker) findViewById(R.id.vertical_1)).setOnNewValueSelectedListener(new                                             OnNewValueSelectedListener() {
             @Override
             public void newValueSelected(int value) {
-                ((TextView) findViewById(R.id.horizontal_2_v)).setText(String.valueOf(value));
+                ((TextView) findViewById(R.id.vertical_1_v)).setText(String.valueOf(value));
             }
         });
