@@ -2,6 +2,8 @@
 
 ![alt tag](https://github.com/kidinov/SimpleNumberPicker/blob/master/app/publ/ezgif.com-gif-maker.gif)
 
+Simple UI component to make process of picking number faster and better looking .Built upon of RecycleView. Support horizontal and vertical orientation.
+
 # Usage
             <org.kidinov.snp_lib.SimpleNumberPicker
                 android:id="@+id/vertical_1"
@@ -19,3 +21,10 @@
                 app:vertical="true"
                 app:delimNumber="5"
                 />
+
+        ((SimpleNumberPicker) findViewById(R.id.horizontal_2)).setOnNewValueSelectedListener(new OnNewValueSelectedListener() {
+            @Override
+            public void newValueSelected(int value) {
+                ((TextView) findViewById(R.id.horizontal_2_v)).setText(String.valueOf(value));
+            }
+        });
