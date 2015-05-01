@@ -1,16 +1,141 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <org.kidinov.snp_lib.SimpleNumberPicker
+                android:id="@+id/horizontal_1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
+                android:layout_height="100dp"
+                app:min="10"
+                app:max="100"
+                />
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <View
+                android:background="@android:color/black"
+                android:layout_centerInParent="true"
+                android:layout_width="1dp"
+                android:layout_height="80dp"/>
 
-</RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:text="1"
+            android:textColor="#727272"
+            android:textSize="40sp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/horizontal_1_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <org.kidinov.snp_lib.SimpleNumberPicker
+                android:id="@+id/horizontal_2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:min="100"
+                app:max="500"
+                app:bigTextColor="#03A9F4"
+                app:smallTextColor="#0288D1"
+                app:smallTextSize="6sp"
+                app:bigTextSize="15sp"
+                app:animationType="alpha"
+                app:notchSize="5sp"
+                app:notchColor="#B3E5FC"
+                app:delimNumber="5"
+                />
+
+            <View
+                android:background="#ccc"
+                android:layout_centerInParent="true"
+                android:layout_width="1dp"
+                android:layout_height="80dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:text="1"
+            android:textSize="40sp"
+            android:textColor="#727272"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/horizontal_2_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <org.kidinov.snp_lib.SimpleNumberPicker
+                android:id="@+id/vertical_1"
+                android:layout_width="100dp"
+                android:layout_height="250dp"
+                app:min="100"
+                app:max="500"
+                app:smallTextColor="#FFC107"
+                app:bigTextColor="#ff8a5600"
+                app:smallTextSize="5sp"
+                app:bigTextSize="12sp"
+                app:animationType="slide_in_right"
+                app:notchSize="10dp"
+                app:notchColor="#ff4a4533"
+                app:vertical="true"
+                app:delimNumber="5"
+                />
+
+            <View
+                android:background="@android:color/black"
+                android:layout_centerInParent="true"
+                android:layout_width="80dp"
+                android:layout_height="1dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:text="1"
+            android:textSize="40sp"
+            android:textColor="#727272"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/vertical_1_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
