@@ -2,7 +2,7 @@
 
 ![alt tag](https://github.com/kidinov/SimpleNumberPicker/blob/master/app/publ/ezgif.com-gif-maker.gif)
 
-Simple UI component to make process of picking number faster and better looking .Built upon of RecycleView. Support horizontal and vertical orientation.
+Simple UI component to make process of picking number faster and better looking . Built upon RecyclerView. Support horizontal and vertical orientation.
 
 # Usage
             <org.kidinov.snp_lib.SimpleNumberPicker
