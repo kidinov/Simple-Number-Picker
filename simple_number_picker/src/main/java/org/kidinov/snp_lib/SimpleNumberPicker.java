@@ -36,15 +36,15 @@ public class SimpleNumberPicker extends LinearLayout {
             final Params params = readParams(typedArray);
 
             llm = new LinearLayoutManager(context,
-                    typedArray.getBoolean(R.styleable.SNPicker_vertical, false) ? LinearLayoutManager.VERTICAL : LinearLayoutManager.HORIZONTAL, false);
+                    typedArray.getBoolean(R.styleable.SNPicker_snp_vertical, false) ? LinearLayoutManager.VERTICAL : LinearLayoutManager.HORIZONTAL, false);
             rv.setLayoutManager(llm);
 
             AnimationAdapter adapter;
             SimplePickerAdapter innerAdapter = new SimplePickerAdapter(context, params);
-            if (typedArray.getString(R.styleable.SNPicker_animationType) == null) {
+            if (typedArray.getString(R.styleable.SNPicker_snp_animationType) == null) {
                 adapter = new ScaleInAnimationAdapter(innerAdapter);
             } else {
-                switch (typedArray.getString(R.styleable.SNPicker_animationType)) {
+                switch (typedArray.getString(R.styleable.SNPicker_snp_animationType)) {
                     case "scale":
                         adapter = new ScaleInAnimationAdapter(innerAdapter);
                         break;
@@ -87,21 +87,21 @@ public class SimpleNumberPicker extends LinearLayout {
 
     private Params readParams(TypedArray ta) {
         Params.Builder builder = new Params.Builder();
-        builder.setSmallTextColor(ta.getColor(R.styleable.SNPicker_smallTextColor, Color.parseColor("#727272")));
-        builder.setBigTextColor(ta.getColor(R.styleable.SNPicker_bigTextColor, Color.parseColor("#212121")));
+        builder.setSmallTextColor(ta.getColor(R.styleable.SNPicker_snp_smallTextColor, Color.parseColor("#727272")));
+        builder.setBigTextColor(ta.getColor(R.styleable.SNPicker_snp_bigTextColor, Color.parseColor("#212121")));
 
-        builder.setBigTextSize(ta.getDimension(R.styleable.SNPicker_bigTextSize, EnvHelper.pxFromDp(getContext(), 10)));
-        builder.setSmallTextSize(ta.getDimension(R.styleable.SNPicker_smallTextSize, EnvHelper.pxFromDp(getContext(), 3)));
+        builder.setBigTextSize(ta.getDimension(R.styleable.SNPicker_snp_bigTextSize, EnvHelper.pxFromDp(getContext(), 10)));
+        builder.setSmallTextSize(ta.getDimension(R.styleable.SNPicker_snp_smallTextSize, EnvHelper.pxFromDp(getContext(), 3)));
 
-        builder.setNotchSize(ta.getDimension(R.styleable.SNPicker_notchSize, EnvHelper.pxFromDp(getContext(), 10)));
-        builder.setNotchColor(ta.getColor(R.styleable.SNPicker_notchColor, Color.parseColor("#B6B6B6")));
+        builder.setNotchSize(ta.getDimension(R.styleable.SNPicker_snp_notchSize, EnvHelper.pxFromDp(getContext(), 10)));
+        builder.setNotchColor(ta.getColor(R.styleable.SNPicker_snp_notchColor, Color.parseColor("#B6B6B6")));
 
-        builder.setDelimNumber(ta.getInt(R.styleable.SNPicker_delimNumber, 10));
+        builder.setDelimNumber(ta.getInt(R.styleable.SNPicker_snp_delimNumber, 10));
 
-        builder.setMin(ta.getInt(R.styleable.SNPicker_min, 0));
-        builder.setMax(ta.getInt(R.styleable.SNPicker_max, 5000));
+        builder.setMin(ta.getInt(R.styleable.SNPicker_snp_min, 0));
+        builder.setMax(ta.getInt(R.styleable.SNPicker_snp_max, 5000));
 
-        builder.setVertical(ta.getBoolean(R.styleable.SNPicker_vertical, false));
+        builder.setVertical(ta.getBoolean(R.styleable.SNPicker_snp_vertical, false));
         return builder.build();
     }
 
