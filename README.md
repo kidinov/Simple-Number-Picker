@@ -25,7 +25,7 @@ Simple UI component to make process of picking number faster and better looking 
         ((SimpleNumberPicker) findViewById(R.id.vertical_1)).setOnNewValueSelectedListener(new                                             OnNewValueSelectedListener() {
             @Override
             public void newValueSelected(int value) {
-                ((TextView) findViewById(R.id.vertical_1_v)).setText(String.valueOf(value));
+                // Use selected value as you want
             }
         });
         
