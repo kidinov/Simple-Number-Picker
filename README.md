@@ -28,3 +28,7 @@ Simple UI component to make process of picking number faster and better looking 
                 ((TextView) findViewById(R.id.vertical_1_v)).setText(String.valueOf(value));
             }
         });
+        
+# Instalation
+
+            compile('com.github.kidinov:snp:1.0.1')
