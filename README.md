@@ -9,17 +9,17 @@ Simple UI component to make process of picking number faster and better looking 
                 android:id="@+id/vertical_1"
                 android:layout_width="100dp"
                 android:layout_height="250dp"
-                app:min="100"
-                app:max="500"
-                app:smallTextColor="#FFC107"
-                app:bigTextColor="#ff8a5600"
-                app:smallTextSize="5sp"
-                app:bigTextSize="12sp"
-                app:animationType="slide_in_right" [scale | alpha | slide_in_bottom | slide_in_right | slide_in_left | slide_in_left]
-                app:notchSize="10dp"
-                app:notchColor="#ff4a4533"
-                app:vertical="true"
-                app:delimNumber="5"
+                app:snp_min="100"
+                app:snp_max="500"
+                app:snp_smallTextColor="#FFC107"
+                app:snp_bigTextColor="#ff8a5600"
+                app:snp_smallTextSize="5sp"
+                app:snp_bigTextSize="12sp"
+                app:snp_animationType="slide_in_right"
+                app:snp_notchSize="10dp"
+                app:snp_notchColor="#ff4a4533"
+                app:snp_vertical="true"
+                app:snp_delimNumber="5"
                 />
 
         ((SimpleNumberPicker) findViewById(R.id.vertical_1)).setOnNewValueSelectedListener(new                                             OnNewValueSelectedListener() {
