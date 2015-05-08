@@ -29,6 +29,6 @@ Simple UI component to make process of picking number faster and better looking 
             }
         });
         
-# Instalation
+# Installation
 
             compile('com.github.kidinov:snp:1.0.1')
