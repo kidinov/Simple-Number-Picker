@@ -19,8 +19,7 @@ Simple UI component to make process of picking number faster and better looking 
                 app:snp_notchSize="10dp"
                 app:snp_notchColor="#ff4a4533"
                 app:snp_vertical="true"
-                app:snp_delimNumber="5"
-                />
+                app:snp_delimNumber="5" />
 
         ((SimpleNumberPicker) findViewById(R.id.vertical_1)).setOnNewValueSelectedListener(new                                             OnNewValueSelectedListener() {
             @Override
